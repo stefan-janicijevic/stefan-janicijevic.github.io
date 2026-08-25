@@ -4,7 +4,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: #008080; /* classic teal */
+  background: #008080 url('/wallpaper.gif') center / cover no-repeat; /* teal fallback while it loads */
   overflow: hidden;
   user-select: none;
 }
