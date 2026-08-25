@@ -264,6 +264,80 @@
   padding: 0;
 }
 
+/* Boot screen -------------------------------------------------------------- */
+
+.boot-screen {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: #c0c0c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.boot-screen-content {
+  text-align: center;
+}
+
+.boot-screen-title {
+  font-size: 28px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.boot-screen-subtitle {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #808080;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.boot-progress {
+  margin: 24px auto 0;
+  width: 220px;
+  height: 12px;
+  border: 1px solid #808080;
+  padding: 2px;
+}
+
+.boot-progress-bar {
+  height: 100%;
+  width: 30%;
+  background: repeating-linear-gradient(
+    90deg,
+    #c0c0c0 0,
+    #c0c0c0 8px,
+    transparent 8px,
+    transparent 11px
+  );
+  animation: boot-progress 1.4s ease-in-out infinite;
+}
+
+@keyframes boot-progress {
+  0% {
+    margin-left: 0%;
+    width: 20%;
+  }
+  50% {
+    margin-left: 60%;
+    width: 30%;
+  }
+  100% {
+    margin-left: 0%;
+    width: 20%;
+  }
+}
+
+.boot-screen-hint {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #606060;
+}
+
 /* Taskbar -------------------------------------------------------------- */
 
 .taskbar {

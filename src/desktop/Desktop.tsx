@@ -3,10 +3,16 @@ import { APPS, APP_ORDER } from '../apps/registry'
 import { DesktopIcon } from './DesktopIcon'
 import { Taskbar } from './Taskbar'
 import { StartMenu } from './StartMenu'
+import { BootScreen } from './BootScreen'
 import { WindowManager } from '../windows/WindowManager'
 
 export function Desktop() {
   const [startOpen, setStartOpen] = useState(false)
+  const [booted, setBooted] = useState(false)
+
+  if (!booted) {
+    return <BootScreen onDone={() => setBooted(true)} />
+  }
 
   return (
     <div className="desktop" onClick={() => startOpen && setStartOpen(false)}>
