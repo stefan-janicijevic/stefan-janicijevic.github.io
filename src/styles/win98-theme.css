@@ -225,6 +225,45 @@
   box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
 }
 
+/* Terminal ---------------------------------------------------------------- */
+
+.terminal-body {
+  height: 100%;
+  overflow-y: auto;
+  background: black;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 13px;
+  padding: 8px;
+  cursor: text;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-line-input {
+  align-items: center;
+}
+
+.terminal-prompt {
+  color: #4caf50;
+  flex-shrink: 0;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+}
+
 /* Taskbar -------------------------------------------------------------- */
 
 .taskbar {
