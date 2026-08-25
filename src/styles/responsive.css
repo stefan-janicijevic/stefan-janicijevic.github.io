@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+  .desktop-icons {
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  .desktop-icon {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .desktop-icon-glyph {
+    font-size: 24px;
+  }
+
+  .desktop-icon-label {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .window-manager {
+    bottom: 32px;
+  }
+
+  .taskbar-window-button {
+    max-width: 96px;
+  }
+
+  .start-menu {
+    width: min(220px, 80vw);
+  }
+}

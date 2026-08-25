@@ -1,0 +1,214 @@
+/* Desktop shell ------------------------------------------------------ */
+
+.desktop {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #008080; /* classic teal */
+  overflow: hidden;
+  user-select: none;
+}
+
+.desktop-icons {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-height: calc(100vh - 60px);
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 80px;
+  min-width: 0;
+  min-height: 0;
+  padding: 6px 4px;
+  background: transparent;
+  box-shadow: none;
+  border: 1px dotted transparent;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.desktop-icon.selected,
+.desktop-icon:focus-visible {
+  background: rgba(0, 0, 128, 0.4);
+  border: 1px dotted white;
+  outline: none;
+}
+
+.desktop-icon-glyph {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.desktop-icon-label {
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  word-break: break-word;
+}
+
+/* Window manager / windows -------------------------------------------- */
+
+.window-manager {
+  position: absolute;
+  inset: 0;
+  bottom: 32px;
+  pointer-events: none;
+}
+
+.window-manager .react-draggable {
+  pointer-events: auto;
+}
+
+.retro-window {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.retro-window-body {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+
+.window-titlebar {
+  cursor: default;
+}
+
+.title-bar-icon {
+  margin-right: 4px;
+}
+
+.app-placeholder {
+  padding: 16px;
+  font-size: 13px;
+}
+
+/* Taskbar -------------------------------------------------------------- */
+
+.taskbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  background: var(--surface, silver);
+  box-shadow: inset 0 1px 0 white;
+  z-index: 10000;
+}
+
+.taskbar-start-button {
+  font-weight: bold;
+  padding: 2px 8px;
+}
+
+.taskbar-start-button.active {
+  box-shadow:
+    inset -1px -1px var(--button-highlight, #fff),
+    inset 1px 1px var(--button-shadow, #808080),
+    inset -2px -2px var(--button-face, #dfdfdf),
+    inset 2px 2px var(--button-shadow, #0a0a0a);
+}
+
+.taskbar-windows {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  min-width: 0;
+}
+
+.taskbar-window-button {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.taskbar-window-button.active {
+  box-shadow:
+    inset -1px -1px var(--button-highlight, #fff),
+    inset 1px 1px var(--button-shadow, #808080),
+    inset -2px -2px var(--button-face, #dfdfdf),
+    inset 2px 2px var(--button-shadow, #0a0a0a);
+}
+
+.taskbar-clock {
+  padding: 2px 8px;
+  box-shadow: var(--border-field, inset -1px -1px #fff, inset 1px 1px #0a0a0a);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Start menu ------------------------------------------------------------ */
+
+.start-menu {
+  position: fixed;
+  left: 2px;
+  bottom: 34px;
+  width: 220px;
+  display: flex;
+  background: var(--surface, silver);
+  box-shadow: var(--border-window-outer), var(--border-window-inner);
+  z-index: 10001;
+}
+
+.start-menu-banner {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background: navy;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  padding: 8px 4px;
+  white-space: nowrap;
+}
+
+.start-menu-items {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+}
+
+.start-menu-items li {
+  display: block;
+}
+
+.start-menu-items button {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 6px 8px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.start-menu-items button:hover {
+  background: navy;
+  color: white;
+}
+
+.start-menu-divider {
+  border-top: 1px solid var(--button-shadow, #808080);
+  border-bottom: 1px solid white;
+  margin: 4px 0;
+}

@@ -2,7 +2,7 @@
 
 See [plan.md](./plan.md) for full detail on each milestone.
 
-- [ ] 1. Scaffold & cleanup — Vite React-TS app, install deps (`zustand`, `react-rnd`, `98.css`), remove placeholder content, commit
+- [x] 1. Scaffold & cleanup — Vite React-TS app, install deps (`zustand`, `react-rnd`, `98.css`), remove placeholder content, commit
 - [ ] 2. Static desktop shell — `Desktop`, `DesktopIcon` grid, static `Taskbar`, background styling
 - [ ] 3. Window manager core — `windowStore` (zustand), `Window` (drag/resize/focus/minimize/maximize/close), wire icons + taskbar buttons
 - [ ] 4. Content windows — `data/*.ts` (placeholder content), `AboutWindow`, `SkillsWindow`, `ProjectsWindow`, `ResumeWindow`
