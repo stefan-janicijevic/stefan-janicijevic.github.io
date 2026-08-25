@@ -94,6 +94,137 @@
   font-size: 13px;
 }
 
+/* Content windows ------------------------------------------------------- */
+
+.notepad-body {
+  padding: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.notepad-body p {
+  margin: 0 0 12px;
+}
+
+.skills-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skills-group legend {
+  padding: 0 4px;
+}
+
+.skills-list li {
+  padding: 2px 0;
+}
+
+.projects-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 80px;
+  background: transparent;
+  box-shadow: none;
+  border: 1px dotted transparent;
+  padding: 6px 4px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.project-tile.selected {
+  background: var(--dialog-blue, navy);
+  color: white;
+  border: 1px dotted white;
+}
+
+.project-tile-glyph {
+  font-size: 28px;
+}
+
+.project-tile-label {
+  font-size: 11px;
+  text-align: center;
+  word-break: break-word;
+}
+
+.project-detail p {
+  margin-top: 0;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.project-tag {
+  background: var(--button-face, #dfdfdf);
+  box-shadow: var(--border-field);
+  padding: 1px 6px;
+  font-size: 11px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.resume-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  min-height: 0;
+}
+
+.resume-frame {
+  flex: 1;
+  min-height: 200px;
+  width: 100%;
+  box-shadow: var(--border-field);
+  border: none;
+  background: white;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resume-download-button {
+  box-sizing: border-box;
+  background: var(--surface);
+  box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+  padding: 4px 12px;
+  text-decoration: none;
+  color: black;
+  font-size: 11px;
+}
+
+.resume-download-button:active {
+  box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
+}
+
 /* Taskbar -------------------------------------------------------------- */
 
 .taskbar {

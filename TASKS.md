@@ -3,8 +3,8 @@
 See [plan.md](./plan.md) for full detail on each milestone.
 
 - [x] 1. Scaffold & cleanup — Vite React-TS app, install deps (`zustand`, `react-rnd`, `98.css`), remove placeholder content, commit
-- [ ] 2. Static desktop shell — `Desktop`, `DesktopIcon` grid, static `Taskbar`, background styling
-- [ ] 3. Window manager core — `windowStore` (zustand), `Window` (drag/resize/focus/minimize/maximize/close), wire icons + taskbar buttons
+- [x] 2. Static desktop shell — `Desktop`, `DesktopIcon` grid, static `Taskbar`, background styling
+- [x] 3. Window manager core — `windowStore` (zustand), `Window` (drag/resize/focus/minimize/maximize/close), wire icons + taskbar buttons
 - [ ] 4. Content windows — `data/*.ts` (placeholder content), `AboutWindow`, `SkillsWindow`, `ProjectsWindow`, `ResumeWindow`
 - [ ] 5. Terminal app — `TerminalWindow`, `commands.ts` registry, scrollback, starter commands
 - [ ] 6. Start menu — `StartMenu` wired to app registry

@@ -1,6 +1,21 @@
 import type { AppId } from '../types/window'
+import { AboutWindow } from '../windows/apps/AboutWindow'
+import { SkillsWindow } from '../windows/apps/SkillsWindow'
+import { ProjectsWindow } from '../windows/apps/ProjectsWindow'
+import { ResumeWindow } from '../windows/apps/ResumeWindow'
+import { TerminalWindow } from '../windows/apps/TerminalWindow'
 
-// Placeholder bodies — replaced with real app components in the content-windows milestone.
 export function renderApp(appId: AppId) {
-  return <div className="app-placeholder">{appId} window — content coming soon.</div>
+  switch (appId) {
+    case 'about':
+      return <AboutWindow />
+    case 'skills':
+      return <SkillsWindow />
+    case 'projects':
+      return <ProjectsWindow />
+    case 'resume':
+      return <ResumeWindow />
+    case 'terminal':
+      return <TerminalWindow />
+  }
 }
