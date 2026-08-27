@@ -4,15 +4,16 @@ import { profile } from '../data/profile'
 
 interface StartMenuProps {
   onClose: () => void
+  onShutdown: () => void
 }
 
-export function StartMenu({ onClose }: StartMenuProps) {
+export function StartMenu({ onClose, onShutdown }: StartMenuProps) {
   const openWindow = useWindowStore((s) => s.openWindow)
 
   return (
     <div className="start-menu">
       <div className="start-menu-banner" aria-hidden="true">
-        <span>{profile.name}</span>
+        <span>{profile.nickname}</span>
       </div>
       <ul className="start-menu-items">
         {APP_ORDER.map((appId) => {
@@ -26,15 +27,21 @@ export function StartMenu({ onClose }: StartMenuProps) {
                   onClose()
                 }}
               >
-                <span aria-hidden="true">{app.icon}</span> {app.label}
+                <span className="start-menu-icon" aria-hidden="true">{app.icon}</span> {app.label}
               </button>
             </li>
           )
         })}
         <li className="start-menu-divider" role="separator" />
         <li>
-          <button type="button" onClick={onClose}>
-            <span aria-hidden="true">🔌</span> Shut Down...
+          <button
+            type="button"
+            onClick={() => {
+              onShutdown()
+              onClose()
+            }}
+          >
+            <span className="start-menu-icon" aria-hidden="true">🔌</span> Shut Down...
           </button>
         </li>
       </ul>

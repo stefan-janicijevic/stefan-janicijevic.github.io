@@ -31,7 +31,7 @@ export function Taskbar({ startOpen, onToggleStart }: TaskbarProps) {
         className={`taskbar-start-button${startOpen ? ' active' : ''}`}
         onClick={onToggleStart}
       >
-        <span aria-hidden="true">🪟</span> Start
+        <span className="taskbar-icon" aria-hidden="true">🪟</span> Start
       </button>
       <div className="taskbar-windows">
         {windows.map((w) => {
@@ -46,7 +46,7 @@ export function Taskbar({ startOpen, onToggleStart }: TaskbarProps) {
                 else focusWindow(w.id)
               }}
             >
-              <span aria-hidden="true">{w.icon}</span> {w.title}
+              <span className="taskbar-icon" aria-hidden="true">{w.icon}</span> {w.title}
             </button>
           )
         })}

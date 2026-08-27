@@ -4,11 +4,13 @@ import { DesktopIcon } from './DesktopIcon'
 import { Taskbar } from './Taskbar'
 import { StartMenu } from './StartMenu'
 import { BootScreen } from './BootScreen'
+import { ShutdownModal } from './ShutdownModal'
 import { WindowManager } from '../windows/WindowManager'
 
 export function Desktop() {
   const [startOpen, setStartOpen] = useState(false)
   const [booted, setBooted] = useState(false)
+  const [shutdownOpen, setShutdownOpen] = useState(false)
 
   if (!booted) {
     return <BootScreen onDone={() => setBooted(true)} />
@@ -26,7 +28,13 @@ export function Desktop() {
 
       {startOpen && (
         <div onClick={(e) => e.stopPropagation()}>
-          <StartMenu onClose={() => setStartOpen(false)} />
+          <StartMenu onClose={() => setStartOpen(false)} onShutdown={() => setShutdownOpen(true)} />
+        </div>
+      )}
+
+      {shutdownOpen && (
+        <div onClick={(e) => e.stopPropagation()}>
+          <ShutdownModal onClose={() => setShutdownOpen(false)} />
         </div>
       )}
 

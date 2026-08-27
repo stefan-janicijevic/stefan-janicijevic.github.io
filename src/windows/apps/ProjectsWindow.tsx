@@ -27,6 +27,7 @@ export function ProjectsWindow() {
         .map((project) => (
           <fieldset key={project.id} className="project-detail">
             <legend>{project.title}</legend>
+            {project.type && <p className="project-type">{project.type}</p>}
             <p>{project.description}</p>
             <div className="project-tags">
               {project.tags.map((tag) => (
@@ -45,6 +46,9 @@ export function ProjectsWindow() {
                 <a href={project.links.demo} target="_blank" rel="noreferrer">
                   Live Demo
                 </a>
+              )}
+              {!project.links.repo && !project.links.demo && (
+                <span className="project-links-empty">Source code not publicly available.</span>
               )}
             </div>
           </fieldset>
