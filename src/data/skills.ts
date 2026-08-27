@@ -5,7 +5,8 @@ export interface SkillGroup {
 }
 
 export const skillGroups: SkillGroup[] = [
-  { category: 'Languages', items: ['TypeScript', 'JavaScript', 'Python'] },
-  { category: 'Frameworks', items: ['React', 'Vite', 'Node.js'] },
-  { category: 'Tools', items: ['Git', 'GitHub Actions', 'VS Code'] },
+  { category: 'Languages', items: ['Java', 'C#', 'TypeScript', 'JavaScript'] },
+  { category: 'Frameworks', items: ['Spring Boot', 'Angular', 'Node.js'] },
+  { category: 'Tools', items: ['VCS', 'AI Tools', 'DevOps'] },
+  { category: 'Databases', items: ['MongoDB', 'MS SQL Server', 'MySQL']}
 ]
