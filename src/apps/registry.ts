@@ -28,7 +28,7 @@ export const APPS: Record<AppId, AppDefinition> = {
     id: 'projects',
     title: 'My Projects',
     label: 'My Projects',
-    icon: '📁',
+    icon: '/icons/folder.png',
     defaultRect: { x: 180, y: 60, width: 560, height: 440 },
   },
   resume: {

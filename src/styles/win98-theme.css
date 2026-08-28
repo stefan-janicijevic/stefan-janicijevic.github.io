@@ -11,6 +11,16 @@
   --accent-cyan: #7ecfd1;
 }
 
+/* Icons ---------------------------------------------------------------- */
+
+.icon-image {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  vertical-align: -0.15em;
+}
+
 /* Desktop shell ------------------------------------------------------ */
 
 .desktop {
@@ -170,6 +180,14 @@
 
 .project-tile-glyph {
   font-size: 28px;
+  color: initial;
+  text-shadow: none;
+  filter: grayscale(1) brightness(0.8);
+  transition: filter 0.15s ease;
+}
+
+.project-tile.selected .project-tile-glyph {
+  filter: none;
 }
 
 .project-tile-label {
@@ -408,12 +426,13 @@
   gap: 4px;
   font-weight: bold;
   padding: 2px 10px;
+  color: #1a1a1a;
+  text-shadow: none;
 }
 
 .taskbar-icon,
 .start-menu-icon {
-  color: initial;
-  text-shadow: none;
+  color: inherit;
 }
 
 .taskbar-start-button.active {
@@ -436,6 +455,8 @@
   white-space: nowrap;
   text-align: left;
   flex-shrink: 0;
+  color: #1a1a1a;
+  text-shadow: none;
 }
 
 .taskbar-window-button.active {
@@ -500,6 +521,8 @@
   padding: 6px 8px;
   font: inherit;
   cursor: pointer;
+  color: #1a1a1a;
+  text-shadow: none;
 }
 
 .start-menu-items button:hover {
