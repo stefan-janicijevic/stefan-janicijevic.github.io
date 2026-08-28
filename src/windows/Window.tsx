@@ -3,6 +3,7 @@ import { useWindowStore } from '../store/windowStore'
 import { useMediaQuery, MOBILE_BREAKPOINT } from '../hooks/useMediaQuery'
 import type { WindowInstance } from '../types/window'
 import { renderApp } from '../apps/renderApp'
+import { AppIcon } from '../components/AppIcon'
 
 interface WindowProps {
   win: WindowInstance
@@ -57,9 +58,7 @@ export function Window({ win, isFocused }: WindowProps) {
           onDoubleClick={() => !isMobile && toggleMaximize(win.id)}
         >
           <div className="title-bar-text">
-            <span className="title-bar-icon" aria-hidden="true">
-              {win.icon}
-            </span>{' '}
+            <AppIcon icon={win.icon} className="title-bar-icon" />{' '}
             {win.title}
           </div>
           <div className="title-bar-controls">

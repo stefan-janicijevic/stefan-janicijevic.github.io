@@ -62,6 +62,12 @@
   line-height: 1;
 }
 
+img.desktop-icon-glyph {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
 .desktop-icon-label {
   font-size: 12px;
   text-align: center;
@@ -414,6 +420,15 @@
 .start-menu-icon {
   color: initial;
   text-shadow: none;
+}
+
+img.taskbar-icon,
+img.start-menu-icon,
+img.title-bar-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  image-rendering: pixelated;
 }
 
 .taskbar-start-button.active {

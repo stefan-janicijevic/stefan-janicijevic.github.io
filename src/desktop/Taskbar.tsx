@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useWindowStore } from '../store/windowStore'
+import { AppIcon } from '../components/AppIcon'
 
 interface TaskbarProps {
   startOpen: boolean
@@ -46,7 +47,7 @@ export function Taskbar({ startOpen, onToggleStart }: TaskbarProps) {
                 else focusWindow(w.id)
               }}
             >
-              <span className="taskbar-icon" aria-hidden="true">{w.icon}</span> {w.title}
+              <AppIcon icon={w.icon} className="taskbar-icon" /> {w.title}
             </button>
           )
         })}
