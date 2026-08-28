@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useWindowStore } from '../store/windowStore'
 import { useMediaQuery, MOBILE_BREAKPOINT } from '../hooks/useMediaQuery'
+import { AppIcon } from '../components/AppIcon'
 import type { AppDefinition } from '../apps/registry'
 
 interface DesktopIconProps {
@@ -23,9 +24,7 @@ export function DesktopIcon({ app }: DesktopIconProps) {
       onDoubleClick={() => !isMobile && openWindow(app.id)}
       onBlur={() => setSelected(false)}
     >
-      <span className="desktop-icon-glyph" aria-hidden="true">
-        {app.icon}
-      </span>
+      <AppIcon icon={app.icon} className="desktop-icon-glyph" />
       <span className="desktop-icon-label">{app.label}</span>
     </button>
   )

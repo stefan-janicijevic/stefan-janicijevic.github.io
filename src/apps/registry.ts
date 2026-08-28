@@ -9,6 +9,8 @@ export interface AppDefinition {
 }
 
 // Icon glyphs are placeholders until real pixel-art icons are added (see TASKS.md polish step).
+// `projects` uses a real pixel-art image (`/assets/icons/folder.svg`); AppIcon renders
+// any icon starting with '/' as an <img> instead of an emoji glyph.
 export const APPS: Record<AppId, AppDefinition> = {
   about: {
     id: 'about',
@@ -28,7 +30,7 @@ export const APPS: Record<AppId, AppDefinition> = {
     id: 'projects',
     title: 'My Projects',
     label: 'My Projects',
-    icon: '📁',
+    icon: '/assets/icons/folder.svg',
     defaultRect: { x: 180, y: 60, width: 560, height: 440 },
   },
   resume: {
