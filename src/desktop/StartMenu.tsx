@@ -1,7 +1,6 @@
 import { APPS, APP_ORDER } from '../apps/registry'
 import { useWindowStore } from '../store/windowStore'
 import { profile } from '../data/profile'
-import { AppIcon } from '../components/AppIcon'
 
 interface StartMenuProps {
   onClose: () => void
@@ -28,7 +27,7 @@ export function StartMenu({ onClose, onShutdown }: StartMenuProps) {
                   onClose()
                 }}
               >
-                <AppIcon icon={app.icon} className="start-menu-icon" /> {app.label}
+                <span className="start-menu-icon" aria-hidden="true">{app.icon}</span> {app.label}
               </button>
             </li>
           )
