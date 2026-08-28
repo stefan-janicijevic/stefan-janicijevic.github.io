@@ -32,7 +32,7 @@ export function Taskbar({ startOpen, onToggleStart }: TaskbarProps) {
         className={`taskbar-start-button${startOpen ? ' active' : ''}`}
         onClick={onToggleStart}
       >
-        <span className="taskbar-icon" aria-hidden="true">🪟</span> Start
+        <IconGlyph icon="/icons/windows98.png" className="taskbar-icon" /> Start
       </button>
       <div className="taskbar-windows">
         {windows.map((w) => {
